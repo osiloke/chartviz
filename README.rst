@@ -10,16 +10,34 @@ It is primarily used to display data from a remote source.
 ========
 Usage
 ========
-The following snippet render a basic Column chart by default using Google Visualization Data produced from the url source.::
+The following snippet render a basic Bar chart (Column Chart is the Default chart.) using Google Visualization Data produced from the url source.:
 
 	$("#example").chartviz({
+		chartType: "Bar",
 		datasource: <url>
 	});
 
+Google Visualization Settings can also be passed to the plugin as shown in the following snippet::
 
+	$("#example").chartViz({
+		chartType: "Column",
+		datasource: <url>,
+		gvSettings: {
+		    title: "Example Chart",
+		    height: 450,
+		    width:800,
+		    vAxis: {
+		        title: "Vertical Axis"
+		    },
+		    legend: 'top',
+		    isStacked: true
+		}
+	 });
 
-ChartViz was built using the jQuery UI Plugin Framework. This method of developing plugins allows users to call
-member functions and change default settings by using the following syntax::
+The plugin allows customization through events. The following snippets allows users to bind to an event which is triggered
+just before the chart is drawn::
 
-	$("#example").chartviz
+	$("#example").bind("preDrawChart",function(){
+		alert("About to Draw Chart");	
+	});
 
