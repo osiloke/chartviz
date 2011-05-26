@@ -10,13 +10,12 @@ It is primarily used to display data from a remote source.
 ========
 Usage
 ========
+..
+The following snippet render a basic Column chart by default using Google Visualization Data produced from the url source.
 
-A Simple Usage is shown below:
 	$("#example").chartviz({
 		datasource: <url>
 	});
-
-This will render a basic chart using Google Visualization Data produced from the url source.
 
 
 
