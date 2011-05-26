@@ -12,7 +12,6 @@ Usage
 ========
 
 A Simple Usage is shown below:
-..:
 	$("#example").chartviz({
 		datasource: <url>
 	});
@@ -22,7 +21,7 @@ This will render a basic chart using Google Visualization Data produced from the
 
 
 ChartViz was built using the jQuery UI Plugin Framework. This method of developing plugins allows users to call
-member functions and change default settings by using the following syntax.
+member functions and change default settings by using the following syntax:
 
 $("#example").chartviz
 
